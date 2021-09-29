@@ -17,5 +17,6 @@ public class HistoryActivity extends AppCompatActivity {
 
         sear1=findViewById(R.id.sear1);
         lista=findViewById(R.id.lista);
+        //
     }
 }

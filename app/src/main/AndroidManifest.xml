@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="zene.han.haniyesamehtasksmanger">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HaniyeSamehTasksManger">
+        <activity
+            android:name=".HistoryActivity"
+            android:exported="true" />
+        <activity
+            android:name=".seetingsActivity"
+            android:exported="true" />
+        <activity
+            android:name=".addTaskActivity"
+            android:exported="true" />
+        <activity
+            android:name=".splachScreenActivity"
+            android:exported="true" />
+        <activity
+            android:name=".activitySignOut"
+            android:exported="true" />
+        <activity
+            android:name=".signInActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
