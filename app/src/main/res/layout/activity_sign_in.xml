@@ -10,9 +10,9 @@
         android:id="@+id/textInputLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="86dp"
-        android:layout_marginBottom="595dp"
-        app:layout_constraintBottom_toTopOf="@+id/rester"
+        android:layout_marginTop="317dp"
+        android:layout_marginBottom="254dp"
+        app:layout_constraintBottom_toTopOf="@+id/signin"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -46,8 +46,8 @@
 
     <Button
         android:id="@+id/rester"
-        android:layout_width="241dp"
-        android:layout_height="0dp"
+        android:layout_width="254dp"
+        android:layout_height="138dp"
         android:layout_marginStart="40dp"
         android:layout_marginBottom="714dp"
         android:layout_weight="1"
@@ -59,9 +59,12 @@
     <Button
         android:id="@+id/signin"
         android:layout_width="429dp"
-        android:layout_height="102dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="1553dp"
         android:text="Sign In"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="487dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
