@@ -1,6 +1,7 @@
 package zene.han.haniyesamehtasksmanger;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -12,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.SearchView;
+import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
@@ -40,20 +42,30 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
     }
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if (item.getItemId() == R.id.mnItmHistory) {
+        if (item.getItemId() == R.id.mnItmHistory)
+        {
             Intent i = new Intent(getApplicationContext(), HistoryActivity.class);
             startActivity(i);
         }
-        if (item.getItemId() == R.id.mnItmSettings) {
+        if (item.getItemId() == R.id.mnItmSettings)
+        {
             Intent i = new Intent(getApplicationContext(), seetingsActivity.class);
             startActivity(i);
         }
-        if (item.getItemId() == R.id.mnItmSignOut) {
-            Intent i = new Intent(getApplicationContext(), activitySignOut.class);
+        if (item.getItemId() == R.id.mnItmSignOut)
+        {
+            AlertDialog.Builder builder = new AlertDialog.Builder( this);
+            builder.setMessage("Are you sure?") ;
+            builder.setCancelable(true);
+
+            builder.setPositiveButton("yes", this);
+           builder.setPositiveButton("no",this);
+            AlertDialog dialog=builder.create();
+            dialog.show();
+            Intent i=new Intent(getApplicationContext(),signInActivity.class);
             startActivity(i);
 
-//            builder.setMessage("Are you sure?") ;
-//            builder.setCancelable(true);
+
 
         }
 
@@ -61,7 +73,22 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
     }
 
     @Override
-    public void onClick(DialogInterface dialog, int which) {
+    public void onClick(DialogInterface dialogInterface, int which)
+    {
+        if (which==dialogInterface.BUTTON_POSITIVE)
+        {
+            Toast.makeText(getApplicationContext(), "loging out", Toast.LENGTH_SHORT).show();
+            finish();
+        }
+        if (which==dialogInterface.BUTTON_NEGATIVE)
+        {
+            Toast.makeText(getApplicationContext(), "Loging out canceled", Toast.LENGTH_SHORT).show();
+            dialogInterface.cancel();
+        }
+
+    }
+    @Override
+    public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
 }
