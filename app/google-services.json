@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "549637784054",
+    "project_id": "haniyesamehtasksmanger",
+    "storage_bucket": "haniyesamehtasksmanger.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:549637784054:android:4c23341155cabb78e007d7",
+        "android_client_info": {
+          "package_name": "zene.han.haniyesamehtasksmanger"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "549637784054-jse45kqv1j51hspgvmaipdsgbjj9hvml.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHT_XuBcIXUz2P964Acoc_CchhOK8yH1Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "549637784054-jse45kqv1j51hspgvmaipdsgbjj9hvml.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

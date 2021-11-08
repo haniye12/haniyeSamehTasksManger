@@ -80,12 +80,14 @@
             android:id="@+id/rd2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="cross line" />
 
         <RadioButton
             android:id="@+id/rd1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:minHeight="48dp"
             android:text="delete " />
 
         <RadioButton

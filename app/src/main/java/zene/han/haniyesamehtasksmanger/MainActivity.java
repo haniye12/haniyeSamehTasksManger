@@ -17,7 +17,8 @@ import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class MainActivity extends AppCompatActivity implements DialogInterface.OnClickListener {
+public class MainActivity extends AppCompatActivity implements DialogInterface.OnClickListener
+{
     private SearchView searchView2;
     private ListView lstvalltasks;
     private FloatingActionButton floatingB3;
