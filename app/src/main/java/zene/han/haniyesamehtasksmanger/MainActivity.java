@@ -16,6 +16,7 @@ import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity implements DialogInterface.OnClickListener
 {
@@ -58,10 +59,12 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
             AlertDialog.Builder builder = new AlertDialog.Builder( this);
             builder.setMessage("Are you sure?") ;
             builder.setCancelable(true);
-
             builder.setPositiveButton("yes", this);
-           builder.setPositiveButton("no",this);
-            AlertDialog dialog=builder.create();
+            builder.setPositiveButton("no",this);
+            builder.setCancelable(true);
+            builder.setPositiveButton("yes", this);
+            builder.setPositiveButton("no",this);
+           AlertDialog dialog=builder.create();
             dialog.show();
             Intent i=new Intent(getApplicationContext(),signInActivity.class);
             startActivity(i);
@@ -79,7 +82,11 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
         if (which==dialogInterface.BUTTON_POSITIVE)
         {
             Toast.makeText(getApplicationContext(), "loging out", Toast.LENGTH_SHORT).show();
+            dialogInterface.cancel();
+            FirebaseAuth auth= FirebaseAuth.getInstance();
+            auth.signOut();
             finish();
+
         }
         if (which==dialogInterface.BUTTON_NEGATIVE)
         {
