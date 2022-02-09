@@ -60,14 +60,10 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
             builder.setMessage("Are you sure?") ;
             builder.setCancelable(true);
             builder.setPositiveButton("yes", this);
-            builder.setPositiveButton("no",this);
+            builder.setNegativeButton("no",this);
             builder.setCancelable(true);
-            builder.setPositiveButton("yes", this);
-            builder.setPositiveButton("no",this);
            AlertDialog dialog=builder.create();
             dialog.show();
-            Intent i=new Intent(getApplicationContext(),signInActivity.class);
-            startActivity(i);
 
 
 
@@ -86,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements DialogInterface.O
             FirebaseAuth auth= FirebaseAuth.getInstance();
             auth.signOut();
             finish();
+            Intent i=new Intent(getApplicationContext(),signInActivity.class);
+            startActivity(i);
 
         }
         if (which==dialogInterface.BUTTON_NEGATIVE)

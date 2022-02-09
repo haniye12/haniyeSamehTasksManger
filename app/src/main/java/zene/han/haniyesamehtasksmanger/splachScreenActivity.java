@@ -32,7 +32,7 @@ public class splachScreenActivity extends AppCompatActivity
                     }
                     else
                     {
-                        startActivity(new Intent(new Intent(getApplicationContext(),signInActivity.class));
+                        startActivity(new Intent(new Intent(getApplicationContext(),signInActivity.class)));
                     }
                 }
                 catch (InterruptedException e) {
